@@ -1,85 +1,152 @@
-# Chinese-Debt-Trap---EDA-project
+📘 China Debt Dataset – Exploratory Data Analysis (EDA)
 
-📌 China Debt Dataset – Exploratory Data Analysis (EDA)
+A complete exploratory data analysis on China’s global lending dataset.
+This project focuses on uncovering trends in international debt distribution, borrower types, sensitive territory overlaps, funded sectors, and year-wise funding patterns.
+The notebook includes data cleaning, preprocessing, feature engineering, and extensive visual analysis.
 
-This project focuses on performing an in-depth Exploratory Data Analysis (EDA) on an international debt dataset, with a specific emphasis on China’s lending patterns, borrower characteristics, sensitive territories, and sector-wise distribution of debt. The aim of the analysis is to clean, transform, visualize, and extract insights that help understand global debt dependencies and financial exposure.
+📑 Table of Contents
 
-🔍 Project Overview
+Project Overview
 
-The dataset contains details on:
+Dataset Description
 
-Loan amount (in millions/billions)
+Data Cleaning & Preprocessing
 
-Lending institutions
+Exploratory Data Analysis
 
-Borrower type
-
-Country receiving the loan
-
-Sensitive territory overlaps (Indigenous, Critical, Protected areas)
-
-Sector in which the loan was issued
-
-Year-wise distribution of debt
-
-This analysis transforms raw financial data into meaningful insights using Python, Pandas, and Seaborn/Matplotlib visualizations.
-
-🧼 Data Cleaning & Preprocessing
-
-Key preprocessing steps included:
-
-Handling missing values and removing incomplete records
-
-Cleaning AMOUNT by converting values from strings (e.g., "$50M", "$2B") into numerically consistent units
-
-Splitting multi-value columns such as LENDER and SENSITIVE_TERRITORY_OVERLAP into separate binary indicator variables
-
-Standardizing inconsistent sector names and fixing formatting errors
-
-Converting categorical features into analyzable forms for uni-variate and bi-variate visual analysis
-
-📊 Exploratory Data Analysis (EDA)
 Univariate Analysis
-
-Distribution plots for loan amounts, revealing large right-skew due to high-value loans
-
-Year-wise loan frequency and trends
-
-Sector-wise loan count to identify commonly funded sectors
-
-Borrower type distribution
-
-Sensitive territory overlaps and frequency analysis
 
 Bivariate Analysis
 
-Relationship between loan amount vs year
+Key Insights
 
-Top 20 countries by total borrowing
+Tech Stack
 
-Borrower-type segmentation of loans
+Project Structure
 
-Sector-wise debt analysis per country
+How to Run the Project
 
-Impact of sensitive territory categories (Indigenous / Critical / Protected) on loan allocation
+Conclusion
 
-Sector and borrower type cross-analysis
+📌 Project Overview
 
-Visualizations include boxplots, countplots, histograms, bar charts (vertical & horizontal), and grouped bar graphs.
+This project performs an in-depth Exploratory Data Analysis (EDA) on an international debt dataset, with an emphasis on China’s global lending.
+The analysis identifies:
 
-📈 Key Insights Extracted
+Countries receiving the highest loans
 
-China issues significantly large amounts of debt to a small set of high-dependence countries.
+Sector-wise investment patterns
 
-Certain sectors—especially infrastructure, multi-sector development, and energy—receive the highest share of loans.
+Borrower-type behavior
 
-Multi-borrower loans and sovereign borrowers dominate the dataset.
+Yearly investment trends
 
-Sensitive territory overlaps (Indigenous / Protected / Critical) are present in multiple projects, indicating geopolitical and environmental considerations.
+Overlaps with sensitive territories (Indigenous, Critical, Protected)
 
-Loan amounts show clear growth trends across specific years, with notable spikes indicating major project funding cycles.
+Multiple visualizations help uncover patterns, anomalies, and significant relationships within the dataset.
 
-🛠️ Tech Stack Used
+📂 Dataset Description
+
+The dataset includes:
+
+AMOUNT of loan (in M/B, cleaned to numeric)
+
+LENDER names (multiple values per entry)
+
+BORROWER TYPE
+
+COUNTRY
+
+SECTOR funded by China
+
+YEAR of loan issuance
+
+SENSITIVE TERRITORY OVERLAP flags
+
+Other categorical and numeric features
+
+🧹 Data Cleaning & Preprocessing
+
+The raw data required significant preprocessing:
+
+✔ Missing Value Handling
+
+Dropped incomplete rows
+
+Verified data consistency post-cleaning
+
+✔ AMOUNT Cleaning
+
+Converted strings like:
+
+$50M → 50
+
+$2B → 2000
+Using custom conversion logic.
+
+✔ Multi-Valued Columns
+
+Columns like LENDER and SENSITIVE_TERRITORY_OVERLAP contained multiple values separated by commas/newlines.
+
+Extracted unique values
+
+Created binary indicator columns for each label
+
+✔ Sector Standardization
+
+Inconsistent sector names (typos, spacing issues) were fixed through value replacement.
+
+✔ New Features
+
+STO_Indigenous
+
+STO_Critical
+
+STO_Protected
+(For sensitive territory categories)
+
+📊 Exploratory Data Analysis
+🔹 Univariate Analysis
+
+Distribution of Loan Amounts — Boxplots, histograms
+
+Year-wise Loan Frequency — Countplots
+
+Sector Distribution — Bar charts
+
+Borrower Type Analysis
+
+Sensitive Territory Overlap Frequency
+
+🔸 Bivariate Analysis
+
+Year vs Amount trends
+
+Top & bottom borrowing countries (bar charts & horizontal bars)
+
+Sector-wise funding by country
+
+Borrower type vs loan amount
+
+Impact of sensitive territories on loan amounts
+
+Correlation exploration through grouped summaries
+
+⭐ Key Insights
+
+A small group of countries receives the majority of China's debt funding.
+
+Infrastructure, energy, and multi-sector development dominate sector-wise funding.
+
+Year-wise funding shows clear peaks corresponding to major investment cycles.
+
+Borrower types like sovereign borrowers receive significantly larger loans.
+
+Many projects overlap with indigenous, critical, or protected territories.
+
+Lender data shows a wide variety of financial institutions contributing to funding.
+
+🛠 Tech Stack
 
 Python
 
@@ -93,7 +160,7 @@ Seaborn
 
 Jupyter Notebook
 
-📁 Project Structure
-├── china_debt.csv
-├── EDA-China-Debt.ipynb
-└── README.md
+🏁 Conclusion
+
+This project provides a complete exploratory analysis of China's international debt dataset, highlighting financial trends, geopolitical indicators, sector behavior, and borrower patterns.
+It serves as a strong foundation for further predictive modeling, dashboard creation, or policy analysis.
